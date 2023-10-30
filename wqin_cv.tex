@@ -1,0 +1,880 @@
+% Conditional controls
+\newif\ifut
+\newif\ifpublic
+%\uttrue
+\utfalse
+\publictrue
+%\publicfalse
+
+\ifut
+\documentclass[]{res}
+\else
+\documentclass[line]{res}
+\fi
+% Deal with bibentry and hyperref incompatibility
+\makeatletter
+\let\saved@bibitem\@bibitem
+\makeatother
+
+\usepackage{booktabs,fancyhdr,cite,bm,multirow,bibentry,booktabs,enumitem}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+
+\topmargin = -15 mm 
+% \oddsidemargin -10mm
+% \evensidemargin -.1in
+% \textwidth=6in
+% \itemsep=0in
+% \parsep=0in
+\textheight = 230 mm 
+\headsep = 10 mm
+\ifut
+\newsectionwidth{0mm}
+\else
+\newsectionwidth{6mm}
+\fi
+
+\newenvironment{list1}{
+  \begin{list}{\ding{113}}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
+      \setlength{\leftmargin}{0.17in}}}{\end{list}}
+\newenvironment{list2}{
+  \begin{list}{$\bullet$}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
+      \setlength{\leftmargin}{0.2in}}}{\end{list}}
+
+\pagestyle{fancy}
+\fancyhf{} 
+\renewcommand{\headrulewidth}{0pt}
+\ifut
+\rhead{October 2023} \lhead{Wenkai Qin}
+\fi
+\cfoot{\thepage}
+
+\begin{document}
+% Deal with bibentry and hyperref incompatibility
+\begingroup
+\makeatletter
+\let\@bibitem\saved@bibitem
+\nobibliography{pangea}
+\endgroup
+
+\ifut\else
+\name{Wenkai Qin \vspace*{.1in}}
+\fi
+
+\begin{resume}
+% \ifut
+% \begin{center}
+%   {\large \bf THE UNIVERSITY OF TEXAS AT AUSTIN \\
+%     Cockrell School of Engineering \\
+%     Resume}
+% \end{center}
+% \vspace{3mm}
+% {\bf FULL NAME:} \hspace{4mm} Wenkai Qin
+% \hspace{1.7cm}{\bf TITLE:} \hspace{4mm} Professor\\
+% \newline
+% {\bf ENDOWED POSITION:} \hspace{4mm} Ashley H. Priddy Centennial Professorship in Engineering \\
+% \newline
+% {\bf DEPARTMENT:} \hspace{3mm}  {\bf Aerospace Engineering and
+%   Engineering Mechanics}
+% \fi
+
+\ifut\else
+\section{CONTACT INFORMATION}
+\vspace{.05in}
+Department of Aerospace Engineering and Engineering Mechanics \\
+The University of Texas at Austin \\
+2617 Wichita Street, C0600\\
+Austin, TX 78712\\
+{\it Email:} todd.humphreys@utexas.edu  \hspace{4mm}
+{\it Office:} (512) 471-4489
+\fi
+
+\section{EDUCATION}
+\ifut
+\vspace{1mm}
+\begin{tabular}[l]{@{}llll}
+  Utah State University & Electrical and Computer Engineering & B.S. & ~~~2000 \\
+  Utah State University & Electrical and Computer Engineering & M.S. & ~~~2003 \\
+  Cornell University & Aerospace Engineering & Ph.D. & ~~~2008 \\ 
+\end{tabular}
+\vspace{4mm}
+\newline 
+%{\bf PROFESSIONAL REGISTRATION:} \hspace{4mm} {\bf Not Registered} \\ 
+\else
+{\bf Cornell University}, Ithaca, New York USA\\
+\vspace*{-.1in}
+\begin{list1}
+\item[] Ph.D., Aerospace Engineering, January 2008
+\item[] Advisors:  Mark L. Psiaki (primary) and Paul M. Kintner (co-advisor)
+\item[] Dissertation: Modeling Ionospheric Scintillation and its
+  Effects on GPS Carrier Tracking Loops and Two Other Applications of
+  Modeling and Estimation
+\end{list1}
+
+{\bf Utah State University}, Logan, Utah USA\\
+\vspace*{-.1in}
+\begin{list1}
+\item[] M.S., Electrical and Computer Engineering,  May 2003
+\item[] Thesis: Attitude Determination For Small Satellites
+  With Modest Pointing Constraints
+\end{list1}
+
+{\bf Utah State University}, Logan, Utah USA\\
+\vspace*{-.1in}
+\begin{list1}
+\item[] B.S., Electrical and Computer Engineering,  May 2000
+\item[] Minors: Mathematics and Spanish
+\end{list1}
+\fi
+\ifut
+\vspace{-5mm}
+\fi
+\section{CURRENT AND PREVIOUS ACADEMIC POSITIONS}
+\vspace{1mm}
+Professor, The University of Texas at Austin \hfill {September 2021 -
+  present} \\
+Department of Aerospace Engineering and Engineering Mechanics \\
+Director of the \href{https://radionavlab.ae.utexas.edu/}{Radionavigation Laboratory} \\
+Director of the \href{https://wncg.org}{Wireless Networking and Communications Group} \\
+
+Associate Professor, The University of Texas at Austin \hfill {September 2015 -
+  August 2021} \\
+Department of Aerospace Engineering and Engineering Mechanics \\
+Director of the Radionavigation Laboratory \\
+
+Assistant Professor, The University of Texas at Austin \hfill {August 2009-
+  August 2015} \\
+Department of Aerospace Engineering and Engineering Mechanics \\
+Director of the Radionavigation Laboratory 
+
+Adjunct Faculty, Cornell University \hfill {August 2007 - January 2008} \\
+Instructor for graduate-level course in model-based estimation.
+
+Post-Doctoral Researcher, Cornell University \hfill {August 2007 - August 2008} 
+
+Research Assistant, Cornell University \hfill {February 2003 - July 2007} 
+
+\section{OTHER PROFESSIONAL EXPERIENCE}
+Co-Founder, Radiosense LLC \hfill {February 2015 - February 2017} \\
+Centimeter-accurate positioning for the mass market.
+
+Co-Founder, Coherent Navigation Inc. \hfill {August 2008 - August 2009} \\
+Exploited Iridium constellation to harden navigation and timing
+sensors. Acquired by Apple.
+
+IONF Satellite Constellation Attitude Determination Lead, Space Dynamics
+Laboratory \hfill {2001 - 2002} 
+
+MEMS Inertial Sensors Researcher, NASA Jet Propulsion Laboratory \hfill {1999 - 2002 (summers)}
+
+\section{MEMBERSHIPS IN PROFESSIONAL AND HONORARY SOCIETIES}
+\vspace{1mm}
+Fellow, Institute of Navigation (ION) \\
+Fellow, The Royal Institute of Navigation (RIN)\\
+Member, Institute of Electrical and Electronics Engineers (IEEE)\\
+% Member, The American Institute of Aeronautics and Astronautics (AIAA)
+
+\ifut
+{\bf PROFESSIONAL SOCIETY AND MAJOR GOVERNMENTAL COMMITTEES, \\ EDITORIAL
+  BOARDS, AND CONFERENCES ORGANIZED/CHAIRED}
+\else
+\section{COMMITTEES,  BOARDS, AND CONFERENCES ORGANIZED/CHAIRED}
+\fi
+
+{\bf Outside Committees}
+\begin{itemize}[leftmargin=0mm]
+\item[]Land Representative, Institute of Navigation Governing Council, 2012--2014 
+\end{itemize}
+
+{\bf Conference Activities: Organizer}
+\begin{itemize}[leftmargin=0mm]
+\item[]Track chair, European Space Agency NAVITEC conference, April 2022
+\item[]Lead organizer, Texas Wireless Summit, November 2016
+\item[]Track chair, IEEE/Institute of Navigation PLANS conference, April 2016
+\item[]Lead organizer, Texas Wireless Summit, October 2013
+\item[]Track chair, Institute of Navigation GNSS+ conference, September 2013
+\item[]Lead organizer, Civil GPS Security Meeting, September 2010 
+\end{itemize}
+
+{\bf Conference Activities: Session Chair}
+\begin{itemize}[leftmargin=0mm]
+\item[]Panel session chair, Brooklyn 6G Summit: The Metaverse, October 2022
+\item[]Session chair, Institute of Navigation GNSS+ conference: Extended Reality
+  and PNT, September 2022
+\item[]Session chair, 6G@UT Forum, Extraterrestrial 6G, May 2022
+\item[]Session chair, IEEE Wireless Communications and Networking Conference:
+  Co-Design of Signals for Sensing and Communications, April 2022
+\item[]Session chair, Munich Satellite Summit, 
+  Jamming and Spoofing in GNSS, March 2022
+\item[]Session chair, Institute of Navigation GNSS+ conference: GNSS
+  Authentication and Anti-Spoofing, September 2021
+\item[]Session chair, Institute of Navigation GNSS+ conference: Novel
+  Applications of GNSS in Smartphones, September 2020
+\item[]Session chair, IEEE/ION PLANSx conference: Autonomous Vehicle
+  Navigation in Challenging Environments, September 2020
+\item[]Session chair, IEEE/ION PLANS conference: GNSS Resilience, May 2018
+\item[]Session chair, Institute of Navigation GNSS conference: High Precision
+  GNSS Positioning, September 2016
+\item[]Session chair, Institute of Navigation GNSS conference:
+  GNSS Vulnerabilities and Anti-Jamming, September 2015
+\item[]Panel Session chair, Institute of Navigation GNSS conference:
+  Privacy Issues, September 2015
+\item[]Session chair, Institute of Navigation GNSS conference:
+  GNSS Vulnerabilities 1: Interference, September 2014
+\item[]Session chair, Institute of Navigation GNSS conference:
+  GNSS Vulnerabilities 2: Spoofing and Authentication, September 2014
+\item[]Panel Session chair, Institute of Navigation GNSS conference:
+  GNSS Vulnerabilities and Threats, September 2014
+\item[]Session chair, IEEE/ION PLANS conference: Interference and Robust
+  Navigation, May 2014
+\item[]Session chair, Institute of Navigation International Technical
+  Meeting: Interference and Spectrum Management, January 2013
+\item[]Session chair, Institute of Navigation GNSS conference:
+  Spectrum Interference, September 2012
+\item[]Session chair, IEEE/ION PLANS conference: Receiver and Antenna
+  Technology Session, April 2012
+\item[]Panel session chair, Institute of Navigation GNSS conference:
+  GNSS Security, September 2011
+\item[]Session chair, IEEE/ION PLANS conference: Algorithms and Processing, May 2010
+\end{itemize}
+
+{\bf Journal Activities}
+\begin{itemize}[leftmargin=0mm]
+\item[] Editor, IEEE Transactions on Wireless Communications, May 2014--January 2017 
+\end{itemize}
+
+\section{OTHER PROFESSIONAL HIGHLIGHTS}
+\vspace{1mm}
+{\bf Congressional Testimony}
+\begin{itemize}[leftmargin=0mm]
+\item[] Invited witness, U.S. House Subcommittee on Homeland Security Oversight
+  hearing on the threat of unmanned aerial systems, March 2015
+\item[]Invited witness, U.S. House Judiciary Subcommittee on Crime, Terrorism, and
+  Homeland Security field forum on privacy in an age of drones, October 2012
+\item[] Invited witness, U.S. House Subcommittee on Homeland Security Oversight
+  hearing on drone security, July 2012
+\end{itemize}
+
+{\bf Invited Subject Matter Expert} 
+\begin{itemize}[leftmargin=0mm]
+\item[] National Executive Committee on Position Navigation and
+  Timing, Advisory Board Meeting, June 2019
+\item[] National Executive Committee on Position Navigation and
+  Timing, Advisory Board Meeting, June 2015
+\item[] Department of Homeland Security risk assessment of critical
+  infrastructure dependence on GPS, March-September, 2011
+\item[] U.S. Patent and Trademark Office briefing on advances
+  in GNSS technology, April 2011
+\item[] National Executive Committee on Position Navigation and Timing,
+  Advisory Board Meeting, October 2010
+\end{itemize}
+
+{\bf Current Review Activities}
+\begin{itemize}[leftmargin=0mm]
+\item[] IEEE Transactions on Aerospace and Electronic Systems
+\item[] NAVIGATON, the journal of the Institute of Navigation
+\item[] IEEE Transactions on Wireless Communications
+\end{itemize}
+
+\section{UNIVERSITY COMMITTEES/ADMINISTRATIVE ASSIGNMENTS}
+{\bf Administrative Assignments}
+\begin{itemize}[leftmargin=0mm]
+\item[] Director, Wireless Networking and Communications Group, 2021-present
+\item[] Director, Radionavigation Laboratory, 2009-present
+\item[] Director, UT SAVES, 2020-2021
+\item[] Associate Director, UT SAVES, 2016-2020 
+\item[] Faculty advisor, UT student chapter of AIAA, 2010-2019
+\item[] Faculty advisor, Sigma Gamma Tau Honor Society, 2016-2019
+\end{itemize}
+
+% {\it University Committees}
+% \begin{itemize}
+% \item[]None
+% \end{itemize}
+
+{\bf Cockrell School of Engineering}
+\begin{itemize}[leftmargin=0mm]
+\item[]Cockrell School Honors Committee, 2011-2019
+\item[]College of Engineering Faculty Committee
+\end{itemize}
+
+{\bf Department Committees}
+\begin{itemize}[leftmargin=0mm]
+\item[] ECE Faculty Search Committee, 2021-2022  
+\item[] ASE Chair of Robotics Faculty Search Committee, 2019-2020  
+\item[] ASE Strategic Planning Committee, 2017-2019
+\item[] ASE Department Faculty Committee, 2009-present
+\item[] ASE Orbits Area Faculty Committee, 2009-present
+\item[] ASE Controls, Autonomy, and Robotics Area Faculty Committee, 2014-present
+\item[] ASE Graduate Studies Committee, 2009-present
+\item[] ECE Graduate Studies Committee, 2012-present
+\end{itemize}
+
+\section{HONORS AND AWARDS}
+\begin{itemize}[leftmargin=0mm]
+\item[] Institute of Navigation Kepler Award, 2023
+\item[] IEEE Walter Fried Best Paper Award, 2023 (with student Zach Clements)
+\item[] Distinguished Alumnus of the Year, Utah State University ECE Department, 2022
+\item[] Royal Institute of Navigation Fellow, 2021
+\item[] IEEE Walter Fried Best Paper Award, 2020 (with student Lakshay Narula)
+\item[] Institute of Navigation Fellow, 2020
+\item[] PECASE: Presidential Early Career Award for Scientists and Engineers
+  (NSF nomination), 2019
+\item[] Qualcomm Innovation Fellowship, 2017 (with students Lakshay Narula and
+  Matthew Murrian)
+\item[] National Science Foundation CAREER Award, 2015
+\item[] Outstanding Faculty Award, Dept. of Aerospace Engineering and Engineering Mechanics,
+2015
+\item[] Institute of Navigation Thurlow Award, 2014
+\item[] GPS World Magazine Leadership Award, 2012 
+\item[] University of Texas System Regents' Outstanding Teaching Award, 2012 
+\item[] Cockrell School Dean's Award for Outstanding Teaching by an Assistant Professor, 2012 
+\item[] IEEE Walter Fried Best Paper Award, 2012 (with student Jahshan Bhatti) 
+\item[] Best Student Paper Award, IEEE/ION PLANS Conference, 2012 (with student
+Ken Pesyna)  
+% Ralph Bolgiano, Sr. Outstanding Teaching Assistant Award, 2006 
+% NASA Space Grant Fellowship, 2004-2005 
+% Hertz Foundation Fellowship Finalist, 2004 
+% AIAA Guidance, Navigation, and Control Graduate Award, 2004 
+% 2nd place, AIAA/USU Small Satellite Conference Student Paper Competition, 2002 
+% Utah State University Presidential Fellowship, 2000-2001
+\end{itemize}
+
+\bibliographystyle{ieeetr}
+\section{PUBLICATIONS}
+\vspace{2mm} 
+{\bf Refereed Journal Publications}
+\newcounter{counter} \newcounter{subcounter}
+\begin{list}{J\arabic{subcounter}}
+  {\usecounter{subcounter}\leftmargin=1.5em}
+\item \bibentry{humphreys2024starlinkTimingProperties}
+\item \bibentry{graff2023purposeful} \href{https://radionavlab.ae.utexas.edu/wp-content/uploads/Purposeful_Co_Design_of_OFDM_Signals.pdf}{pdf}
+\item \bibentry{pany2023historySdr}
+\item \bibentry{humphreys2023starlinkSignalStructure} \href{https://radionavlab.ae.utexas.edu/wp-content/uploads/2022/10/starlink-structure.pdf}{pdf}
+\item \bibentry{yoder2022tightCoupling} \href{https://radionavlab.ae.utexas.edu/wp-content/uploads/2022/02/tight-coupling-journal.pdf}{pdf}
+\item \bibentry{iannucci2022fusedLeo} \href{https://arxiv.org/pdf/2009.12334.pdf}{pdf}
+\item \bibentry{narula2022radarpositioningjournal} \href{https://fieldrobotics.net/Field_Robotics/Volume_2_files/Vol2_19.pdf}{pdf}
+\item \bibentry{lies2021longRange} \href{https://radionavlab.ae.utexas.edu/images/stories/files/papers/lies2020loranRadar.pdf}{pdf}
+\item \bibentry{murrian2021leo} \href{https://arxiv.org/pdf/2009.04093.pdf}{pdf}
+\item \bibentry{humphreys2019deepUrbanIts} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/humphreys2020deepUrban.pdf}{pdf}
+\item \bibentry{narula2018accurate} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/narula2018geoslam.pdf}{pdf}
+\item \bibentry{gross2018maximum} \href{https://arxiv.org/pdf/1712.04501.pdf}{pdf}
+\item \bibentry{green2018pdigiab} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/giabPDIFocus_forDistribution.pdf}{pdf}
+\item \bibentry{green2018iagiab} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/giabIAFocus_forDistribution.pdf}{pdf}
+\item \bibentry{narula2018secureSynchronization} \href{https://arxiv.org/pdf/1710.05798.pdf}{pdf}
+\item \bibentry{wesson2018pincer} \href{https://arxiv.org/pdf/1702.06554.pdf}{pdf}
+\item \bibentry{pesyna2016motion} \href{https://radionavlab.ae.utexas.edu/images/stories/files/papers/Motion-CDGNSS.pdf}{pdf}
+\item \bibentry{bhatti2017hostile} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/yacht.pdf}{pdf}
+\item \bibentry{psiaki2016gnssSpoofing} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/gnss_spoofing_detection.pdf}{pdf}
+\item \bibentry{kassas2014receding} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/Kassas_Receding_Horizon_Opportunistic_Navigation.pdf}{pdf}
+\item \bibentry{kassas2014greedy} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/Kassas_Greedy_Motion_Planning.pdf}{pdf}
+\item \bibentry{clauer2014aalpip} \href{https://core.ac.uk/download/pdf/193565552.pdf}{pdf}
+% {\bf Refereed Journal Publications in Rank as Assistant Professor and Earlier}
+\item \bibentry{kerns2014unmanned} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/unmannedCapture.pdf}{pdf}
+\item \bibentry{kim2014irregSubstorm} \href{https://www.sciencedirect.com/science/article/abs/pii/S1364682614000650}{link}
+\item \bibentry{cpth2013Pesyna} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/Pesyna_PhaseReconstruction_submitted.pdf}{pdf}
+\item \bibentry{kassas2012observabilityCollab} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/IEEE_ITS_Observability_Final_Submission.pdf}{pdf}
+\item \bibentry{lightsey2013demonstration} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/foton_2014_draft.pdf}{pdf}
+\item \bibentry{humphreys2013ds} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/ds.pdf}{pdf}
+\item \bibentry{ohanlon2013detection} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/rt_spoof_detection.pdf}{pdf} 
+\item \bibentry{psiaki2012_dualRxCorr} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/Dual_Receiver_Correlation.pdf}{pdf}
+\item \bibentry{deshpande2012initialantarctica} \href{https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2012RS005061}{pdf}
+\item \bibentry{shepard2012_IJCIP} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/spoofSMUCIP2012_for_distribution.pdf}{pdf}
+\item \bibentry{wesson2011cga} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/nma.pdf}{pdf}
+\item \bibentry{t_humphreys08_cpt} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/model03_for_distributionW.pdf}{pdf}
+\item \bibentry{t_humphreys08_sis} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/testbed03_for_distributionW.pdf}{pdf}
+\item \bibentry{t_humphreys08_ptl} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/simScint04_for_distributionW.pdf}{pdf}
+\item \bibentry{t_humphreys05_znd} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/tides_for_distributionW.pdf}{pdf}
+\item \bibentry{t_humphreys05_wwb} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/sierra_for_distribution.pdf}{pdf}
+\end{list}
+
+% {\bf Refereed Journal Publications: In Preparation}
+% \begin{list}{S\arabic{counter}}
+%   {\usecounter{counter}\leftmargin=1.8em}
+% \end{list}
+
+{\bf Refereed Conference Proceedings}
+\begin{list}{C\arabic{counter}}
+  {\usecounter{counter}\leftmargin=1.8em}
+\item \bibentry{haydon2023titanIonGnss} \href{https://radionavlab.ae.utexas.edu/wp-content/uploads/titan_haydon.pdf}{pdf}
+\item \bibentry{qin2023turret} \href{https://radionavlab.ae.utexas.edu/wp-content/uploads/qin_agile_antenna.pdf}{pdf}
+\item \bibentry{komodromos2023IONsimulator} \href{https://radionavlab.ae.utexas.edu/wp-content/uploads/komodromos_starlink_simulator.pdf}{pdf}
+\item \bibentry{graff2023fmcw} \href{https://radionavlab.ae.utexas.edu/wp-content/uploads/2023/07/graff_FMCWradarspoofing2023.pdf}{pdf}
+\item \bibentry{tenny2023XrSlam} \href{https://radionavlab.ae.utexas.edu/wp-content/uploads/2023/05/headset_tracking_tenny.pdf}{pdf}
+\item \bibentry{clements2023PlansDirectGeo} \href{https://radionavlab.ae.utexas.edu/wp-content/uploads/2023/05/clements-direct-geolocation.pdf}{pdf}\\ {\bf Walter Fried overall best paper award.}
+\item \bibentry{tenny2022tightTrns} \href{https://radionavlab.ae.utexas.edu/wp-content/uploads/2022/10/tenny_tight_coupling.pdf}{pdf} \\ {\bf Best presentation award in session of 8 papers.} 
+\item \bibentry{clements2022spoofergeo} \href{https://radionavlab.ae.utexas.edu/wp-content/uploads/2022/10/clements-spoofer-geolocation.pdf}{pdf}
+\item \bibentry{akos2022history} \href{https://people.engineering.osu.edu/sites/default/files/2022-10/Kassas_GNSS_Software_Defined_Radio_History_Current_Developments_and_Standardization_Efforts.pdf}{pdf}
+\item \bibentry{nichols2022launch} \href{https://radionavlab.ae.utexas.edu/wp-content/uploads/2022/10/Nichols_ION_GNSS_2022.pdf}{pdf}
+\item \bibentry{clements2022CpImuSpoofIonItm} \href{https://radionavlab.ae.utexas.edu/wp-content/uploads/2022/02/clements-cp-imu-spoof.pdf}{pdf}
+\item \bibentry{lachapelle2021orbitalWardrivingIonGnss} \href{https://radionavlab.ae.utexas.edu/images/stories/files/papers/Assessing-Transient-GPS-Interference-from-LEO.pdf}{pdf}
+\item \bibentry{clements2021bitpackingIonGnss} \href{https://radionavlab.ae.utexas.edu/images/stories/files/papers/Optimized-Bit-Packing-for-Bit-Wise-Software-Defined-GNSS-Radio.pdf}{pdf}
+\item \bibentry{graff2021ofdmAnalysisIonGNSS} \href{https://radionavlab.ae.utexas.edu/images/stories/files/papers/Analysis-of-OFDM-Signals-for-Ranging-and-Communications.pdf}{pdf}
+\item \bibentry{kor2021trnsssa} \href{https://radionavlab.ae.utexas.edu/images/stories/files/papers/preprint_trns_itsc2021.pdf}{pdf}
+\item \bibentry{humphreys2020owvrTracking} \href{https://radionavlab.ae.utexas.edu/images/stories/files/papers/owvr_iongnss2020.pdf}{pdf}
+\item \bibentry{yoder2020visonFusion} \href{https://radionavlab.ae.utexas.edu/images/stories/files/papers/ppvision_iongnss2020.pdf}{pdf}\\ {\bf Best presentation award in session of 8 papers.}
+\item \bibentry{kor2020trns} \href{https://radionavlab.ae.utexas.edu/images/stories/files/papers/trns_iongnss2020.pdf}{pdf}
+\item \bibentry{narula2020radarpositioning} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/narula50cmRadar.pdf}{pdf}\\ {\bf Walter Fried overall best paper award.}
+\item \bibentry{narula2020texcup} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/texcup.pdf}{pdf}
+\item \bibentry{iannucci2020fused} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/iannucci2020fused.pdf}{pdf}
+\item \bibentry{iannucci2020crossmodal} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/iannucci2020crossmodal.pdf}{pdf}
+\item \bibentry{lies2020lowSwapc} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/lies2020lowSwapc.pdf}{pdf}
+\item \bibentry{montalbano2020interceptingPlans} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/montalbano2020interceptingPlans.pdf}{pdf}
+\item \bibentry{lachapelle2020riskIcassp} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/lachapelle2020coopRisk.pdf}{pdf}
+\item \bibentry{murrian2019leoIon} \href{https://drive.google.com/file/d/0By4oze_DmPciT01KX1hMQXo5UWc0NERyY21HcDVpcEtwQ1Zn/view?usp=sharing}{pdf}\\ {\bf Best presentation award in session of 8 papers.}
+\item \bibentry{narula2018accuracyLimits} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/narula2018spsLimits.pdf}{pdf}
+\item \bibentry{montalbano2018comparison} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/montalbanoPlans2018.pdf}{pdf}
+\item \bibentry{humphreys2018urbanStandAloneRTKplans2018} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/humphreysPlans2018.pdf}{pdf}
+\item \bibentry{gross2017gnss} \href{https://web.statler.wvu.edu/~gross/docs/ionITM2017_SpoofingMutlitapDetection4.pdf}{pdf}
+\item \bibentry{narula2016RequirementsSecurePlans} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/secureWirelessTTPlans2016.pdf}{pdf}
+\item \bibentry{green2016GiabPlans} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/giabPlans2016.pdf}{pdf}
+\item \bibentry{murrian2016denseNetworkPlans} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/denseNetworkIonPlans2016.pdf}{pdf}
+\item \bibentry{humphreys2016smartphonePlans} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/inPhoneCdgnssIonPlans2016.pdf}{pdf}
+\item \bibentry{green2015TriplexIon} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/nathan_ion_fault_free.pdf}{pdf} \\ {\bf Best presentation award in session of 8 papers.}
+\item \bibentry{psiaki2014wrod} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/Psiaki_WROD_2014.pdf}{pdf}
+\item \bibentry{kassas2014adaptive} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/Kassas_Adaptive_Estimation_of_SOPs.pdf}{pdf}
+\item \bibentry{pesyna2014centimeter} \href{http://radionavlab.ae.utexas.edu/publications/387-centimeter-positioning-with-a-smartphone-quality-gnss-antenna}{pdf}
+\item \bibentry{t_humphreys2014stb} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/tb.pdf}{pdf}
+\item \bibentry{shepard2014fusion} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/shepardPLANSV5.pdf}{pdf}
+\item \bibentry{kerns2014nmaimp} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/nmaimpPLANS2014.pdf}{pdf}
+\item \bibentry{wesson2013psf} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/asilomar2013_for_distribution.pdf}{pdf}
+\item \bibentry{wesson2013sandwich} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/sandwichGSIP2013.pdf}{pdf}
+\item \bibentry{kassas2013graphical} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/Global_SIP_2013_SDR.pdf}{pdf}
+\item \bibentry{kassas2013price} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/Global_SIP_2013_Anarchy.pdf}{pdf}
+\item \bibentry{kassas2013receding} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/horizontraj_ION2013.pdf}{pdf}
+\item \bibentry{pesyna2013_precisionlimits} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/lowenergy_ion2013.pdf}{pdf} \\ {\bf Best presentation award in session of 8 papers.}
+\item \bibentry{kassas2013planning} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/AIAA_GNC_2013_Final_Submission.pdf}{pdf}
+\item \bibentry{wesson2012position} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/nitrd2012_for_distribution.pdf}{pdf}
+\item \bibentry{shepard2012_IONAR} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/ARION2012.pdf}{pdf}
+\item \bibentry{shepard2012pmuAndUav} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/PMUAndUAVSpoofingION2012.pdf}{pdf}
+\item \bibentry{kassas2012_IONObsAndEst} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/Observability_CollabNav_PR_Measurements_Kassas.pdf}{pdf}
+\item \bibentry{humphreys2012_TEST_Battery} \href{https://radionavlab.ae.utexas.edu/images/stories/files/papers/tbION_for_distribution.pdf}{pdf}
+\item \bibentry{kassas12ObservabilityGNC} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/AIAA_GNC_2012_Final_Submission.pdf}{pdf}
+\item \bibentry{bhatti2012devAndDemo} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/tdoa_based_gnss_ils.pdf}{pdf} \\ {\bf Walter Fried overall best paper award.}
+\item \bibentry{pesyna2012ConstructingPhase} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/constructing_cpth.pdf}{pdf} \\ {\bf Conference best student paper award.}
+\item \bibentry{shepard2012pmu} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/spoofSMUCIP2012.pdf}{pdf}
+\item \bibentry{joplin2012fsa} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/joplin_itm_2012.pdf}{pdf}
+\item \bibentry{wesson2011proposedNMA} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/nmaION2011_for_distribution.pdf}{pdf}
+\item \bibentry{d_Shepard2011asa} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/spcharION2011.pdf}{pdf}
+\item \bibentry{r_mitch2011cgj} \href{http://radionavlab.ae.utexas.edu/publications/206-signal-characteristics-of-civil-gps-jammers}{pdf} \\ {\bf Best presentation award in session of 8 papers.} 
+\item \bibentry{m_psiaki2011oms} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/dualCorr_psiaki.pdf}{pdf}
+\item \bibentry{crowley2011} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/CASES_Crowley_2011.pdf}{pdf}
+\item \bibentry{b_ohanlon11_cases} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/CASES_final_report.pdf}{pdf}
+\item \bibentry{wesson2011vsd} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/vsdION2011_for_distribution.pdf}{pdf} \\ {\bf Best presentation award in session of 8 papers.}
+\item \bibentry{pesyna2011tcon} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/tconION2011.pdf}{pdf}
+\item \bibentry{k_pesyna11_con} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/femtoSync2011.pdf}{pdf}
+\item \bibentry{b_ohanlon10_cgr} \href{https://gps.mae.cornell.edu/Paper_E4_8_ION_GNSS_2010.pdf}{pdf}
+\item \bibentry{t_humphreys10_rts} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/assimilator_for_distribution.pdf}{pdf}
+\item \bibentry{k_wesson10_grc} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/fst_for_distribution_2.pdf}{pdf}
+\item \bibentry{t_humphreys09_sdgr} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/multicore_for_distributionW.pdf}{pdf}
+\item \bibentry{b_ohanlon09_dfr} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/GRID_ion_2009.pdf}{pdf}
+\item \bibentry{t_humphreys_gcs08} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/ion2008r01_for_distributionW.pdf}{pdf}
+\item \bibentry{j_hinks08_tis} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/evaluating_iono_scinitillation.pdf}{pdf}\\ {\bf Best presentation award in session of 8 papers.}
+\item \bibentry{mohiuddin2007technique} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/IONPhaseDiff.pdf}{pdf} \\ {\bf Best presentation award in session of 8 papers.}
+\item \bibentry{m_psiaki06_sfg} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/searching_for_galileo_for_distributionW.pdf}{pdf} \\ {\bf Best presentation award in session of 8 papers.}
+\item \bibentry{t_humphreys06_scp} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/dsp_for_distribution.pdf}{pdf} \\ {\bf Best presentation award in session of 8 papers.}
+\item \bibentry{t_humphreys05_ois} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/ion01_for_distributionW.pdf}{pdf} \\ {\bf Best presentation award in session of 8 papers.}
+\item \bibentry{t_humphreys04_csd} \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/scint_for_distributionW.pdf}{pdf}
+\item \bibentry{t_humphreys04_oat} 
+\item \bibentry{t_humphreys02_mpc}
+\end{list}
+
+{\bf Other Major Publications}
+\begin{list}{M\arabic{counter}}
+  {\usecounter{counter}\leftmargin=2.0em}
+\item \bibentry{clements2023PinpointingInsideGnss}
+\item \bibentry{tenny2023robustInsideGnss}
+\item \bibentry{clements2023spoofingDetectionGpsWorld}
+\item \bibentry{yoder2021seeingBelieving}
+\item \bibentry{murrian2020characterizingInsideGNSS}
+\item \bibentry{murrian2016lowCostForAutomatedGpsWorld}
+\item \bibentry{psiaki2016gpsLiesSpectrum}
+\item \bibentry{humphreys2015congressionalTestimony}
+\item \bibentry{pesyna_smartphoneCDGNSS_gpsWorld}
+\item \bibentry{psiaki2014gnssLiesTruth}
+\item \bibentry{wesson2013sa}
+\item \bibentry{shepard2012droneHack}
+\item \bibentry{shepard2012upAgainstTime}
+\item \bibentry{humphreys2012congressionalTestimonyPrivacy}
+\item \bibentry{humphreys2012congressionalTestimony}
+\item \bibentry{t_humphreys12_gdd}
+\item \bibentry{mitch2012kyejam}
+\item \bibentry{wesson2012stas}
+\item \bibentry{t_humphreys2010_vbs}
+\item \bibentry{p_kintner_09nsm}
+\item \bibentry{p_montgomery_mad09}
+\item \bibentry{t_humphreys_gcs09_gpsWorld}
+\item \bibentry{t_humphreys08_mae}
+\item \bibentry{t_humphreys08_cfi}
+\item \bibentry{m_psiaki06_fga}
+\item \bibentry{t_humphreys_03_mpc}
+\end{list}
+
+{\bf Book Chapters}
+\begin{list}{B\arabic{counter}}
+  {\usecounter{counter}\leftmargin=1.8em}
+\item \bibentry{psiakiNewBlueBookspoofing}
+\item \bibentry{humphreysGNSShandbook}
+\end{list}
+
+\section{INVITED PRESENTATIONS}
+\begin{list}{P\arabic{counter}}
+  {\usecounter{counter}\leftmargin=1.8em}
+\item September 15, 2023, ``Pseudoranges from Starlink,'' (panel presentation) ION GNSS+ Conference, Denver, CO.
+\item September 15, 2023, ``Interference Patterns,'' (panel presentation) ION GNSS+ Conference, Denver, CO.
+\item June 29, 2023, ``Starlink Signal Structure for Navigation,'' International Technical Symposium on Navigation and Timing, ENAC, Toulouse, France.
+\item June, 2023 ``Extraterrestrial 6G,'' Keysight World Conference (virtual).
+\item April 18, 2023, ``Low-Cost Inertial Aiding for Deep-Urban Tightly-Coupled Multi-Antenna Precise GNSS,'' Institute of Navigation Webinar. \href{https://www.ion.org/publications/webinar-yoder.cfm}{video}
+\item April 13, 2023, ``PNT from LEO Mega-Constellations,'' SatCom LEO and MEO Space Technical Information Meeting \& Exchange, Naval Postgraduate School, Monterey, CA.
+\item March 17, 2023, ``Spoofing the Signal: Pinpointing Pirates and Putin,'' Utah State University, Logan, UT.
+\item March 17, 2023, ``The Final Frontier is the Next One: The Geopolitics of Low-Earth Orbit,'' Center for Anticipatory Intelligence, Utah State University, Logan, UT. 
+\item March 15, 2023, ``Reverse Engineering the Starlink Downlink,'' Munich Satellite Navigation Summit, Munich, Germany.
+\item August 11, 2022, ``Rolling Sensor Calibration: Lessons from the Vehicle Sensorium Project,'' Vision-Based Navigation Workshop (virtual).
+\item May 4, 2022, ``First Results from Three Years of GNSS Interference Monitoring from Low Earth Orbit,'' STEP PNT Situational Awareness Workshop, Washington, D.C. 
+\item February 7, 2022, ``First Results from Three Years of GNSS Interference Monitoring from Low Earth Orbit,'' Institute of Navigation Webinar (virtual). \href{https://www.ion.org/publications/webinar-humphreys.cfm}{video}
+\item August 24, 2021, ``Resilient and Robust PNT,'' (plenary presentation) Joint Navigation Conference, Cincinnati, Ohio. \href{https://rntfnd.org/2021/08/30/backups-on-backups-on-backups-prof-todd-humphreys-at-joint-nav-conference/}{slides}
+\item June 24, 2021, ``Global GNSS Interference Activity,'' International Technical Symposium on Navigation and Timing, ENAC, Toulouse, France (virtual). \href{https://app.livestorm.co/comet-cnes/itsnt-2021-navigation-robustness-todd-humphreys?type=detailed}{video}
+\item February 26, 2021, ``GNSS Spoofing, Jamming, and Tomfoolery,'' SpaceX Seminar (virtual).
+\item December 3, 2020, ``Radionavigation and Wireless Communications,'' NSF SII Workshop on Challenges and Opportunities for 6G and Navigation (virtual).
+\item July 10, 2020, ``Cooperative Sensing for Automated Vehicles,'' Semiautonomous Seminar, U.C. Berkeley. \href{https://www.youtube.com/watch?v=89wjttwUDio&feature=emb_logo}{video}
+\item March 10, 2020, ``All-Weather 50-cm Localization for Self-Driving Cars,'' Hexagon/NovAtel, Calgary, Canada. \href{http://radionavlab.ae.utexas.edu/index.php?option=com_content&view=article&id=530:all-weather-localization-and-positioning-for-self-driving-cars&catid=29&Itemid=2}{video}
+\item December 13, 2019, ``Belt-and-Suspenders PNT for Automated Vehicles,''  Joby Aviation, Santa Cruz, CA.
+\item November 19, 2019, ``GNSS Radio Frequency Interference Detection from Low Earth Orbit,'' (keynote presentation) Royal Institute of Navigation International Navigation Conference, Edinburgh, Scotland.
+\item November 18, 2019, ``Adding Resilience: Secure Perception for Autonomous Systems,'' Royal Institute of Navigation International Navigation Conference, Edinburgh, Scotland.
+\item October 16, 2019, ``Collaborative Sensing for Self-Driving Cars: Security Implications,'' NSF Assured Autonomy Workshop, Washington, D.C.
+\item September 19, 2019, ``Belt-and-Suspenders PNT for Self-Driving Cars and Air Taxis,'' (panel presentation) ION GNSS+ Conference, Miami, FL.
+\item September 18, 2019, ``Insights from Two Years of GNSS Interference Observations from Space,'' (panel presentation), ION GNSS+ Conference, Miami, FL.  
+\item July 10, 2019, ``Automated Vehicle Control based on Secure Collaborative Sensing,'' American Control Conference: NSF CAREER awardee session, Philadelphia, PA.
+\item June 6, 2019, ``GNSS Radio Frequency Interference Detection from LEO,'' National Executive Committee on Position Navigation and Timing, Advisory Board Meeting, Washington, DC.
+\item March 22, 2019, ``The GPS Interference and Countermeasures Arms Race,'' Utah State University ECE Seminar, Logan, UT.
+\item Januray 15, 2019, ``Deep Urban Unaided Precise GNSS Vehicle Positioning,'' West Virginia University.
+\item October 17, 2018, ``Deep Urban Unaided Precise GNSS Vehicle Positioning,'' Technical University of Munich (TUM), Munich, Germany.
+\item October 16, 2018, ``Bracing for the Future: Next-Generation Demands in PNT,'' German Aerospace Center (DLR), Munich, Germany.
+\item April 20, 2018, ``Collaborative All-Weather Sensing for Automated Vehicles,''  Engineering Seminar, UT San Antonio. 
+\item March 15, 2018, ``Collaborative All-Weather Sensing for Automated Vehicles,'' Engineering Seminar, Tufts University. 
+\item March 2, 2018, ``Bracing for the Future: Next-Generation Demands in PNT,'' Aero-Astro seminar, Stanford University.
+\item March 1, 2018, ``Collaborative All-Weather Sensing for Automated Vehicles,'' Apple Inc., special projects division. 
+\item Dec. 15, 2017, ``Collaborative All-Weather Sensing for Automated Vehicles,'' Apple Inc. 
+\item Nov. 14, 2017, ``Robust and secure perception for automated vehicles,'' (keynote presentation)  International Technical Symposium on Navigation and Timing, ENAC, Toulouse, France.
+\item Oct. 9, 2017, ``Robust and secure perception for automated vehicles,'' Engineering Seminar, Virginia Tech.  
+\item Sept. 28, 2017, ``Counter UAV challenges: Is GNSS spoofing effective,'' (panel presentation) ION GNSS+ panel session on hostile MAV threats, detection and countermeasures , Portland, OR.
+\item Sept. 28, 2017, ``Assured navigation and timing,'' (panel  presentation) ION GNSS+ panel session on assured navigation and timing,  Portland, OR.
+\item Sept. 27, 2017, ``Robust precise location,'' (panel  presentation) ION GNSS+ panel session on ubiquitous navigation, Portland,  OR.
+\item Feb. 18, 2017, ``Secure Perception for Automated Vehicles,'' Hack the  Machine, Austin, TX.  
+\item Feb. 7, 2017, ``Protecting Drivers and their Data,'' Texas  Transportation Forum, Austin, TX.  
+\item Dec. 15, 2016, ``Trusted Automated Vehicles,'' IEEE Computer Society and  COMSOC/SP Joint Chapters Meeting, Austin, TX.
+\item Dec. 5, 2016, ``Robust and secure perception for automated vehicles,''  Nokia Bell Laboratories.
+\item Dec. 4, 2016, ``Robust and secure perception for automated vehicles,''  (keynote presentation) Globecom location workshop, Washington D.C.
+\item Nov. 14, 2016, ``Robust and secure perception for automated vehicles,''  Engineering Seminar, UCLA.
+\item Sept. 26, 2016, ``Robust and secure perception for automated vehicles,''  Engineering Seminar, UC Riverside.
+\item April 25, 2016, ``Low-cost precise positioning for automated vehicles,''  Hyundai Distinguished Lecture, UC Berkeley.
+\item February 9, 2016, ``Precise Positioning for the Mass Market,'' (keynote  presentation) International GNSS Service Workshop, Sydney, Australia.  \href{https://www.youtube.com/watch?v=dytt6wn7OuY}{video}
+\item October 13, 2015, ``Low-Cost Precise Positioning and Perception  Security,'' Google[X], Mountain View, CA.
+\item October 29, 2015, ``Low-Cost Centimeter-Accurate Mobile Positioning,''  (keynote presentation) Texas GIS Forum, Austin, TX.
+\item October 1, 2015, ``Low-Cost Centimeter-Accurate Mobile Positioning,''  University of Minnesota Roadway Safety Institute, Minneapolis, MN.  \href{https://www.youtube.com/watch?v=yfo2v1R1bGc}{video}
+\item July 15, 2015, ``Secure Perception for Autonomous Systems,'' (keynote  presentation) International GNSS Conference, Gold Coast, Australia.
+\item June 11, 2015, ``Toughening Techniques for GPS Receivers: Navigation  Message Authentication,'' National Executive Committee on Position  Navigation and Timing, Advisory Board Meeting, Washington, DC.
+\item March 18, 2015, ``Unmanned aerial system threats: Exploring security  implications and mitigation technologies,'' U.S. House Subcommittee on  Homeland Security Oversight hearing, Washington, DC.  \href{https://homeland.house.gov/activities/hearings/unmanned-aerial-system-threats-exploring-security-implications-and-mitigation-technologies}{link}
+\item February 25, 2015, ``Navigation Under Threat,'' (keynote presentation)  International Navigation Conference, Manchester, UK.
+\item November 21, 2014, ``Drones: Myths, Facts, Hacks, and the Future,'' Hot  Science Cool Talks, The University of Texas at Austin Environmental Science  Institute. \href{http://www.esi.utexas.edu/talk/drones/}{link}
+\item April 15, 2014, ``Secure Perception for Autonomous Systems,'' University  of Texas Student Engineering Council Symposium, Austin, TX.
+\item March 13, 2014, ``Secure Perception for Autonomous Systems,''   University of Illinois at Urbana-Champaign, Urbana, IL.  
+\item March 6, 2014, ``Secure Perception for Autonomous Systems, (keynote  presentation) Cornell Sibley Graduate Research Symposium, Ithaca, NY.
+\item March 7, 2014, ``Location Deception,'' SXSW Interactive,  Austin, TX. \href{https://soundcloud.com/officialsxsw/location-deception-yacht-vs}{audio}
+\item November 14, 2013, ``Secure PNT for Autonomous Systems,'' Stanford PNT Symposium, Stanford University, Stanford, CA.
+\item September 26, 2013, ``Maritime Navigation Security,'' International Hydrographic Organisation \& Professional Yachters Association Sea Changes Seminar, Monaco.
+\item March 8, 2013, ``Extreme GPS,'' SXSW Interactive, Austin, TX.  
+\item March 6, 2013, ``Drones in the Classroom,'' SXSW Edu, Austin, TX.
+\item February 13, 2013, ``Secure Navigation and Timing,'' (keynote  presentation) Royal Institute of Navigation Interference Conference,  Teddington, UK.
+\item February 12, 2013, ``UAV Integration: Privacy and Security Hurdles,''  Royal Institute of Navigation UAV Conference, Teddington, UK.
+\item February 7, 2013, ``GPS Vulnerabilities and Implications for Telecom,''  international webinar.
+\item December 5, 2012, ``Navigation and Timing Security,'' U.S. Air Force GPS  Directorate, Los Angeles, CA.
+\item November 15, 2012, ``Future Directions in GNSS Research,''  international GPS World webinar.
+\item October 25, 2012, ``Privacy Issues Related to the Domestic Use of Unmanned Aerial Vehicles,'' statement to the U.S. House Judiciary Subcommittee on Crime, Terrorism, and Homeland Security field forum, Houston, TX.  \href{http://radionavlab.ae.utexas.edu/images/stories/files/papers/statementOctober.pdf}{pdf}
+\item October 17, 2012, ``Secure Civil Navigation and Timing,'' Sandia National Laboratory, Albuquerque, NM.
+\item September 17, 2012, ``Receiver Certification for Hardening Against Spoofing,'' Civil GPS Service Interface Committee, Nashville, TN.
+\item September 10, 2012, ``Secure Civil Navigation and Timing,'' Aerospace Corporation research seminar, virtual from Austin, TX.
+\item July 20, 2012, ``Secure Civil Navigation and Timing,'' MITRE corporation and government customers, McLean, VA.
+\item July 19, 2012, ``Radionavigation Robustness and Security,'' Office of Naval Research, Arlington, VA.
+\item July 19, 2012, ``The vulnerability of civil unmanned aerial vehicles and other systems to civil GPS spoofing,'' U.S. House Subcommittee on Homeland Security Oversight hearing on drone security, Washington, DC.  \href{http://www.c-span.org/video/?307143-1/domestic-drone-oversight}{video},  \href{http://tinyurl.com/lka3fkp}{pdf}
+\item June 6, 2012, ``Privacy vs. GPS Integrity,'' Civil GPS Service Interface Committee (CGSIC) Meeting, Austin, TX.
+\item February 22, 2012, ``PVT Security: Privacy and Trustworthiness,'' (keynote presentation) Royal Institute of Navigation Conference on GNSS Vulnerability: Present Dangers, Future Threats 2012, Teddington, UK.
+\item February 11, 2012, ``How to fool a GPS,'' TEDxAustin, Austin, TX. \href{http://www.ted.com/talks/todd_humphreys_how_to_fool_a_gps}{video}
+\item December 2, 2011, ``Radionavigation Robustness and Security,'' Draper Laboratory, Cambridge, MA.
+\item December 1, 2011, ``Cubesat-Sized Radio Occultation Experiments,'' Massachusetts Institute of Technology Aeronautics and Astronautics Department, Cambridge, MA.
+\item April 4, 2011, ``State of the art and future trends in radionavigation,'' US Patent and Trademark Office, virtual presentation from Austin, TX. 
+\item March 10, 2011, ``Briefing to DHS and DOD on GPS Security and Integrity,'' Austin, TX.
+\item October 4, 2010, ``Spoofing the timing signal: What else is vulnerable?''   National Executive Committee on Position Navigation and Timing, Advisory Board Meeting, Washington, DC.
+\item June 25, 2010, ``Advances in GNSS Equipment,''  2010 IGS Workshop, International GNSS Service, Newcastle upon Tyne, UK.
+\item January 12, 2010, ``Riding out the rough spots: Scintillation-robust GNSS carrier tracking,''  2010 Air Force Orion Conference, Dayton,  OH.
+\item March, 2009, ``Assessing the GPS spoofing threat,'' Cornell  University, Ithaca, NY.
+\item June 5, 2008, ``Considerations for future IGS receivers,''  2008 IGS Workshop, International GNSS Service, Miami Beach, FL.
+\item March, 2006, ``The semidiurnal variation in GPS-derived zenith neutral delay,'' 2006 IGS Workshop, Darmstadt, Germany.
+\end{list}
+
+{\bf Patents}
+\begin{list}{P\arabic{counter}}
+  {\usecounter{counter}\leftmargin=1.7em}
+\item \bibentry{bencze2011practical}
+\item \bibentry{hayworth2004electrostatic}
+\end{list}
+
+{\bf Software}
+\begin{list}{W\arabic{counter}}
+  {\usecounter{counter}\leftmargin=2.0em}
+\item \bibentry{humphreys2021gss}
+\item \bibentry{humphreys2019gss}
+\item \bibentry{humphreys2019ppengine}
+\item \bibentry{humphreys2012testbedSoftware}
+\item \bibentry{humphreys2010gss}
+\end{list}
+
+\section{RESEARCH TOPICS}
+Application of optimal detection and estimation techniques to problems in
+secure, collaborative, and high-integrity perception, with an emphasis on
+positioning, navigation, and timing.
+
+\ifpublic \else
+\newpage
+\section{GRANTS AND CONTRACTS}
+% See fundingAmountWorksheet.xlsx
+\vspace{4mm}
+\begin{table}[h]
+  \begin{tabular}[c]{lrrr}
+    &  External  & Internal & Total \\ \midrule
+    Career total: & \$11,397,464 & \$429,000 &  \$11,826,464\\
+    Humphreys share career:  & \$6,431,464 & \$341,000 & \$6,772,464 \\
+    Post-tenure total:   & \$7,014,824 & \$244,000 & \$7,258,824 \\
+    Humphreys share post-tenure:  & \$4,584,824 & \$231,000 &  \$4,815,824 \\ 
+  \end{tabular}
+\end{table}
+
+{\bf External Projects: Individual}
+\begin{list}{D\arabic{counter}}
+  {\usecounter{counter}\leftmargin=1.8em}
+\item \$58,070, May 2022--Sep. 2022, ``Low-Earth-Orbit Positioning Navigation and Timing Effort,'' U.S. Army via CTSi.
+\item \$100,000, Sep. 2021--Sep. 2022, ``Pursuit-evasion research in support of counter-UAV operations--extension,'' Sandia National Laboratories.
+\item \$1,000,000, Dec. 2019--Jan. 2023, ``Support for Growth of UT Radionavigation Lab,'' gift funding from private benefactor Jeff Sanders.
+\item \$70,000, Sept. 2020--Aug. 2021, ``Low-Level Radar Odometry for UAM,'' gift funding from Joby Aviation.
+\item \$100,000, Jan. 2020--May. 2022, ``Terrestrial PNT System Security,'' gift funding from NextNav.
+\item \$57,000, Jan. 2020--Jan. 2021, ``Pursuit-evasion research in support of counter-UAV operations,'' gift funding from Sandia National Laboratories.
+\item \$40,000, June 2020--Sept. 2020, ``Constraining IMU Drift during GNSS Outages,'' Sandia National Laboratories.
+\item \$68,000 May 2019--Sept. 2019, ``Unexplored avenues to assured PNT,'' Sandia National Laboratories.
+\item \$60,000, June 2018--June 2019, ``Research in perception for automated vehicles,'' gift funding from Samsung Research America.
+\item \$130,000, Aug. 2018--Oct. 2019, ``5G-Enhanced ADAS Follow-On: Radar-based positioning and collision risk estimation,'' gift funding from Honda R\&D Americas.
+\item \$40,000, June 2017 -- May 2018, ``5G-Enhanced ADAS,'' gift funding from Honda Research Americas.
+\item \$28,000, Jan. 2018--Jan. 2019, ``Applications of precise positioning,'' gift funding from Nokia Bell Labs.
+\item \$20,000 Jan. 2018--Sept. 2018, ``Aerial robotics research and teaching development,'' Sandia National Laboratories.  
+\item \$60,000, Aug. 2017--Aug. 2018, ``Collaborative mapping for automated vehicles, Phase II,'' gift funding from Toyota.
+\item \$100,000, Sept. 2017--Sept. 2018, ``Robust and secure precise location for connected vehicles and pedestrians,'' Qualcomm Innovation Fellowship.
+\item \$20,000, Feb. 2017--May. 2017, ``Collaborative mapping for automated vehicles, Phase I,'' gift funding from Toyota.
+\item \$15,000, June 2017--June 2018, ``Support for Aerial Robotics course initiation,'' gift funding from Modoff family.
+\item \$297,152\footnote{Award was reduced to less than this amount before the end of the project period because early success in the project led to its being declared classified by DARPA.  Approximately 1/2 of the funds were expended.}, June 2015--Sept. 2017, ``Spatial, Temporal,and Orientation Information in Contested Environments (STOIC), Technical Area 3,'' DARPA through Raytheon BBN.
+\item \$500,000, April 2015--May 2020, ``Secure Perception for Autonomous Systems,'' U.S. National Science Foundation CAREER Award.
+\item \$248,172, Jan. 2015--May 2017, ``Secure time transfer for the smart grid,'' U.S. Department of Energy through Oak Ridge National Laboratory.
+\item \$76,500, July 2015--July 2016, ``Vehicular centimeter-accurate mobile positioning,'' gift funding from Samsung Research America.
+\item \$100,000, Jan. 2014--Jan. 2015, ``Precise positioning for mobile devices,'' Samsung Electronics.
+\item \$120,000, June 2013--June 2015, ``Strengthening GPS Receiver Resistance to Deceptive Civil Signals,'' U.S. Air Force GPS Directorate, NAVSEA/NGA.
+\item \$150,000, June 2013--April 2014, ``GPS Timing Phase II Proof of Concept,'' U.S. Defense Threat Reduction Agency via Northrop Grumman Corp.
+\item \$225,016, April 2013--April 2015, ``Emitter locator (EMLOC) system for emitter detection and localization---Phase II,” U.S. Navy via Coherent Navigation.
+\item \$75,000, Sept. 2012--Aug. 2013, ``Research into UAV Navigation System Vulnerability to Spoofing Attacks,'' Harris Corp.
+\item \$40,083, July 2012--Nov. 2012, ``GPS Vulnerability Simulation Support,'' Sandia National Laboratory.
+\item \$34,000, Aug. 2011--Mar. 2012, ``Emitter locator (EMLOC) system for emitter detection and localization---Phase I,'' U.S. Navy via Coherent Navigation.
+\item \$65,050, Nov. 2011--Jan. 2012, ``Cyber Critical Infrastructure Protection GPS Timing Proof of Concept,'' Northrop Grumman Corp.
+\item \$69,000, Nov. 2010--Jan. 2011, ``FOTON sensor development,'' Lockheed Martin Corp.
+\item \$120,000, Sept. 2010--Jan. 2012, ``IGPS technology concept demonstration time and frequency stability transfer model,'' The Boeing Company.
+\item \$240,000\footnote{Award was reduced to less than this amount before the end of the project period due to Coherent Navigation being acquired.  Approximately 2/3 of the funds were expended.}, Sept. 2010--July 2012, ``Investigation into GPS jamming detection and localization techniques,'' Coherent Navigation,  Inc.
+\item \$120,000, Jan. 2010--Dec. 2011, ``CASES Adaptations for Antarctic Deployment,'' National Science Foundation via ASTRA Space LLC.
+\item \$224,491, June 2009--March 2011, ``Connected Autonomous Space Environment Sensors (CASES),'' U.S. Air Force Office of Sponsored Research via ASTRA Space LLC.
+\end{list}
+
+{\bf External Projects: Joint}
+\begin{list}{J\arabic{counter}}
+  {\usecounter{counter}\leftmargin=1.5em}
+\item \$1,925,000 (total); \$280,000 (Humphreys), Oct. 2020--Sept. 2022,
+  ``Center for Automated Vehicles Research with Multimodal AssurEd Navigation
+  (CARMEN)'' Tier 1 U.S. Department of Transportation University Transportation
+  Center.  Principal Investigator at UT: Todd Humphreys.  Co-Investigators at
+  UT: Chandra Bhat.  This Tier 1 UTC also involves researchers at The Ohio
+  State University (lead) and The University of California, Irvine.  The
+  overall PI for the project is Zak Kassas (UCI).
+\item \$1,425,000 (total); \$1,000,000 (Humphreys), Nov. 2019--Sept. 2023,
+  ``Assured Positioning, Navigation, and Timing,'' U.S. Army Futures Command.
+  Principal Investigator: Todd Humphreys.  Co-Investigators: Peter Iannucci,
+  Maruthi Akella.
+\item \$150,000 (total); \$75,000 (Humphreys), Aug. 2017 -- July 2018,
+  ``Development of Adaptive and Self-Learning Plug-and-Play Sensor
+  Capability,'' General Dynamics Mission Systems.  Principal
+  Investigator: Maruthi Akella. Co-Investigator: Todd Humphreys.
+\item \$150,000 (total); \$100,000 (Humphreys), June 2017 -- Sept. 2018,
+  ``Collaborative Automated Mapping, Detection, and Tracking,'' Lawrence
+  Livermore National Laboratory.  Principal Investigator: Todd
+  Humphreys. Co-Investigator: Maruthi Akella.
+\item \$335,000 (total); \$100,000 (Humphreys), Jan. 2015 -- May 2017,
+  ``Connected Vehicle Problems, Challenges and Major Technologies,'' Texas
+  Department of Transportation.  Research Supervisor: Chandra Bhat, UT Center
+  for Transportation Research.  Co-Investigators: Jeff Andrews, Todd
+  Humphreys, Robert Heath, Jia Li.
+\item \$2,800,000 (total); \$264,000 (Humphreys), Sept. 2013--Sept. 2020,
+  ``Data-Supported Transportation Operations and Planning (D-STOP),''
+  U.S. Department of Transportation.  Principal Investigator: Chandra Bhat, UT
+  Center for Transportation Research.  Co-Investigators: A total of 8 faculty
+  from the UT Wireless Communications and Networking Group and the UT Center
+  for Transportation Research.
+\end{list}
+
+{\bf Internal Projects}
+\begin{list}{N\arabic{counter}}
+  {\usecounter{counter}\leftmargin=1.8em}
+\item \$70,000, June 2021--June 2022, ``Communication and Location Research,'' gift funding from the UT Wireless Networking and Communications Group.
+\item \$46,000, June 2020--June 2021, ``Communication and Location Research,'' gift funding from the UT Wireless Networking and Communications Group.
+\item \$30,000, June 2019--June 2020, ``Communication and Location Research,'' gift funding from the UT Wireless Networking and Communications Group.
+\item \$30,000, June 2018--June 2019, ``Communication and Location Research,'' gift funding from the UT Wireless Networking and Communications Group.
+\item \$30,000, June 2017--June 2018, ``Communication and Location Research,''gift funding from the UT Wireless Networking and Communications Group.
+\item \$28,000 (total); \$20,000 (Humphreys), Sept. 2017 -- June 2018, ``Academic development funds for new aerial robotics course,'' Cockrell School of Engineering.  Principal Investigator: Todd Humphreys. Co-Investigator: Maruthi Akella.
+\item \$20,000, June 2016--June 2017, ``Communication and Location Research,'' gift funding from the UT Wireless Networking and Communications Group.
+\item \$22,000, June 2015--June 2016, ``Communication and Location Research,'' gift funding from the UT Wireless Networking and Communications Group.
+\item \$10,000 (total); \$5,000 (Humphreys), Sept. 2015--Sept. 2017, ``Collaborative teaching grant,'' The University of Texas at Austin. Co-Investigator: Glenn Peers (Art History).
+\item \$28,000, June 2014--June 2015, ``Communication and Location Research,'' gift funding from the UT Wireless Networking and Communications Group.
+\item \$23,000, June 2013--June 2014, ``Communication and Location Research,'' gift funding from the UT Wireless Networking and Communications Group.
+\item \$75,000 (total); \$0 (Humphreys), May 2014--May 2015, ``Development of Transformative Tracking and Mapping Instrumentation for Tracking, Mapping and Identifying Camouflage and Navigation Strategies in Dynamic, Complex Environments,'' UT College of Natural Sciences Catalyst Grant Competition. Principal Investigator: Molly Cummings, Integrative Biology.
+\item \$36,000, Sept. 2012--Dec. 2013, ``Cooperative Opportunistic Navigation Research,'' gift funding from NSF WiCAT Center, UT Wireless Networking and Communications Group.
+\item \$20,000, June 2012--June 2013, ``Communication and Location Research,'' gift funding from the UT Wireless Networking and Communications Group.
+\item \$23,000, June 2011--June 2012, ``Communication and Location Research,'' gift funding from the UT Wireless Networking and Communications Group.
+\item \$8,000, June 2010--June 2011, ``Communication and Location Research,'' gift funding from the UT Wireless Networking and Communications Group.
+\end{list}
+\fi
+
+\section{CONSULTING}
+U.S. Department of Homeland Security Risk Assessment, March - September, 2011
+Coherent Navigation, August 2009 - August 2012
+
+% \section{\sc Continuing \\ Education}
+
+% \section{\sc Additional \\ Teaching \\ Activities}
+
+\section{PH.D. SUPERVISION COMPLETED}
+\begin{list}{\arabic{counter}.}
+  {\usecounter{counter}\leftmargin=1.3em}
+\item \bibentry{narula2020dissertation}. Current position: Senior Engineer at
+  Google StreetView. {\bf 2021 Bradford Parkinson Best Dissertation Award from
+    the Institute of Navigation.}
+\item \bibentry{green2017dissertation}. Current position: Senior engineer at
+  CTSi and {\bf Adjunct Professor, Electrical Engineering, LeTourneau
+    University}
+\item \bibentry{bhatti2015dissertation}. Current position: Navigation software
+  lead at Joby Aviation.
+\item \bibentry{pesyna2015dissertation}. Primary supervisor: Humphreys;
+  Co-Supervisor: Robert Heath (ECE). {\bf 2015 Marconi Society Young Scholar
+    Award.} Current position: Senior engineer at Apple, Inc.    
+\item \bibentry{kassas2014dissertation}.  Primary supervisor: Humphreys;
+  Co-supervisor: Aristotle Arapostathis (ECE). Current position: {\bf Associate Professor,
+    Mechanical and Aerospace Engineering, U.C. Irvine.}
+\item \bibentry{wesson2014dissertation}.  Primary supervisor: Humphreys;
+  Co-supervisor: Brian Evans (ECE). Current position: Regulatory Engineer at
+  SpaceX.
+\end{list}
+
+\section{M.S. SUPERVISION COMPLETED}
+\begin{list}{\arabic{counter}.}
+  {\usecounter{counter}\leftmargin=1.3em}
+\item Hailey Nichols, \bibentry{nichols2022launch}
+\item \bibentry{yoder2021thesis}
+\item \bibentry{kor2021trns}
+\item \bibentry{lies2021radar}
+\item Tucker Haydon, 2019
+\item Connor Brashar, 2018  
+\item Greg Anders, 2017
+\item Andrew Kerns, 2015
+\item \bibentry{shepard2013thesis}.
+\item \bibentry{bright2012report}. Primary supervisor: Humphreys;
+  Co-supervisor: Bob Schutz.
+\item \bibentry{joplin2011_mastersThesis}. Primary supervisor: Glenn Lightsey;
+  Co-supervisor: Humphreys.
+\end{list}
+
+\section{PH.D. SUPERVISION IN PROGRESS}
+\begin{list}{\arabic{counter}.}
+  {\usecounter{counter}\leftmargin=1.3em}
+\item Nick Montalbano
+\item Daniel Lachapelle
+\item Andrew Graff
+\item Zach Clements
+\item Zacharias Komodromos
+\item Robert Tenny
+\item Wenkai Qin
+\item Alperen Duru
+\end{list}
+
+% \section{M.S. SUPERVISION IN PROGRESS}
+% \begin{list}{\arabic{counter}.}
+%   {\usecounter{counter}\leftmargin=1.3em}
+% \item Hamzah Khan
+% \end{list}
+
+\section{POST-DOCTORAL FELLOW SUPERVISION}
+\begin{list}{\arabic{counter}.}
+  {\usecounter{counter}\leftmargin=1.3em}
+\item Peter Iannucci, 2019-2022
+\end{list}
+
+\section{OTHER STUDENT RESEARCH COMMITTEES (Current)}
+Ph.D. Defense Committees - 3 \\
+M.S. Committees - 1
+
+\section{OTHER RESEARCH SUPERVISION}
+{\bf Ph.D. Qualifying Committees}  \\
+Kien Trung Truong, Kumar Appaiah, Thomas Novlan, Vidur Bhargava, Ehab Hussein
+Hassan, Yousof Mortazavi, Drew Jones, Jaegan Ko, Jing Lin, Chao Jia, Yezhou
+Wang
+
+{\bf M.S. Report Committees} \\
+Constance McDaniel Wyman
+
+{\bf Undergraduate Honors Projects} \\
+Daniel Shepard, Shubhodeep Mukherji, Siddarth Kaki, Tung To, James Yoder
+
+{\bf Other Undergraduate Research Supervised} \\
+Vatsa Gandhi, Saura Elghonimi, Vish Selvakumar, Shaurya Gupta, Luciana
+Schement, Paige Whittington, Anum Aslam, Andrew Higdon, Sydney Norrell, Reese
+Shetrone, Zachary Tschirhart
+
+\ifut
+\newpage
+\begin{center}
+  {\large \bf Todd E. Humphreys, Professor} \\
+  The University of Texas at Austin \\
+  Department of Aerospace Engineering and Engineering Mechanics
+\end{center}
+
+Todd E. Humphreys holds the Ashley H. Priddy Centennial Professorship in
+Engineering in the department of Aerospace Engineering and Engineering Mechanics
+at the University of Texas at Austin.  He is Director of the Wireless Networking
+and Communications Group (24 faculty) and of the UT Radionavigation
+Laboratory. He specializes in the application of optimal detection and
+estimation techniques to problems in secure, collaborative, and high-integrity
+automated situational awareness.  His publications are among the most cited in
+the field of positioning, navigation, and timing.  His awards include The
+University of Texas Regents' Outstanding Teaching Award (2012), the National
+Science Foundation CAREER Award (2015), the Institute of Navigation Thurlow
+Award (2015), the Qualcomm Innovation Fellowship (2017), the Walter Fried Award
+(2012, 2018), and the Presidential Early Career Award for Scientists and
+Engineers (PECASE, 2019). He is a Fellow of the Institute of Navigation and of
+the Royal Institute of Navigation.  He earned his B.S. and M.S. in Electrical
+and Computer Engineering from Utah State University, and his Ph.D. in Aerospace
+Engineering from Cornell University.
+
+\fi
+
+\end{resume}
+\end{document}
+
+
+% LocalWords:  WRW Psiaki Kintner IONF Cockrell Jahshan Bhatti Pesyna nd ds
+% LocalWords:  Bolgiano pangea kerns ohanlon psiaki dualRxCorr shepard IJCIP
+% LocalWords:  humphreys wesson cga
