@@ -16,7 +16,7 @@
 \let\saved@bibitem\@bibitem
 \makeatother
 
- \pagenumbering{gobble}
+ \pagenumbering{arabic}
 \usepackage{booktabs,fancyhdr,cite,bm,multirow,bibentry,booktabs,enumitem}
 \usepackage[colorlinks=true, urlcolor=blue]{hyperref}
 
@@ -110,7 +110,7 @@ Austin, TX 78712\\
 {\bf University of Texas at Austin}, Austin, Texas USA\\
 \vspace*{-.15in}
 \begin{list1}
-\item[] Ph.D., Aerospace Engineering, May 2027 (expected)
+\item[] Ph.D., Aerospace Engineering, May 2026 (expected)
 \item[] Advisor: Todd E. Humphreys
 \item[] Affiliation: Radionavigation Laboratory
 % \item[] Dissertation: Modeling Ionospheric Scintillation and its
@@ -145,6 +145,16 @@ Austin, TX 78712\\
 Research Assistant, University of Texas at Austin \hfill {September 2022 -- present}
 
 \section{OTHER PROFESSIONAL EXPERIENCE}
+
+\emph{Amazon} \hfill {May 2025 -- August 2025} \\
+Applied Scientist \hfill Austin, TX \\
+\begin{list1}
+\item[] Designed and prototyped alternative positioning, navigation and timing (PNT) solutions for the Kuiper satellite communications constellation.
+\item[] Architected and implemented a comprehensive hardware-in-the-loop signal chain to generate Kuiper down-link waveforms, process them through custom space-ground channel emulation, and produce a real-time simulated PNT fix.
+\item[] Developed initial network-entry algorithms to minimize cold-start acquisition and authentication time for user terminals.
+\item[] Successfully deployed the complete system stack onto a phased-array-equipped mobile test platform, enabling field validation in dynamic environments.
+\end{list1}
+
 \emph{Raytheon Missiles and Defense} \hfill {September 2019 -- April 2022} \\
 Guidance Navigation and Control Engineer II \hfill Tucson, AZ \\
 Guidance Navigation and Control Engineer I\\
@@ -164,7 +174,7 @@ Data Engineer \hfill Long Beach, CA \\
 \item[] Cleaned data, improved data quality through data inaccuracy profiling and recommended process improvements.
 \end{list1}
 
-\pagebreak
+% \pagebreak
 
 \emph{C2 Education} \hfill {July 2018 -- February 2019}\\
 Private Tutor \hfill Greenwich, CT \\
@@ -177,6 +187,7 @@ Private Tutor \hfill Greenwich, CT \\
 
 \section{MEMBERSHIPS IN PROFESSIONAL AND HONORARY SOCIETIES}
 \vspace{1mm}
+Member, Institute of Electrical and Electronics Engineers (IEEE) \\
 Member, Institute of Navigation (ION)
 
 % \ifut
@@ -269,24 +280,23 @@ Member, Institute of Navigation (ION)
 \vspace{2mm}
 \newcounter{counter} \newcounter{subcounter}
 
-% {\bf Refereed Journal Publications}
-% \begin{list}{J\arabic{subcounter}}
-%   {\usecounter{subcounter}\leftmargin=1.5em}
-% \item \bibentry{humphreys2024starlinkTimingProperties}
-% \end{list}
 
-{\bf Refereed Journal Publications: In Preparation}
-\begin{list}{S\arabic{counter}}
+{\bf Refereed Journal Publications}
+\begin{list}{J\arabic{counter}}
   {\usecounter{counter}\leftmargin=1.8em}
-\item \bibentry{qin2024starlinkTimingProperties} % \href{https://radionavlab.ae.utexas.edu/wp-content/uploads/komodromos_starlink_simulator.pdf}{[pdf]}
+  \item \bibentry{qin2025starlinktimingproperties} \href{https://arxiv.org/pdf/2501.05302}{[pdf]}
 \end{list}
 
 {\bf Refereed Conference Proceedings}
 \begin{list}{C\arabic{counter}}
   {\usecounter{counter}\leftmargin=1.8em}
-\item \bibentry{qin2023turret} \href{https://radionavlab.ae.utexas.edu/wp-content/uploads/qin_agile_antenna.pdf}{[pdf]}
-\item \bibentry{komodromos2023IONsimulator} \href{https://radionavlab.ae.utexas.edu/wp-content/uploads/komodromos_starlink_simulator.pdf}{[pdf]}
-\item \bibentry{qin2024shortTermFrameTiming} % \href{https://radionavlab.ae.utexas.edu/wp-content/uploads/komodromos_starlink_simulator.pdf}{[pdf]}
+  \item \bibentry{komodromos2023IONsimulator} \href{https://radionavlab.ae.utexas.edu/wp-content/uploads/komodromos_starlink_simulator.pdf}{[pdf]}
+  \item \bibentry{qin2023turret} \href{https://radionavlab.ae.utexas.edu/wp-content/uploads/qin_agile_antenna.pdf}{[pdf]}
+  \item \bibentry{komodromos2024weakstarlinksignal} % \href{https://radionavlab.ae.utexas.edu/wp-content/uploads/komodromos_starlink_simulator.pdf}{[pdf]}
+  \item \bibentry{qin2024shortTermFrameTiming} \href{https://radionavlab.ae.utexas.edu/wp-content/uploads/Qin_analysis_of_short_term_time_stability_starlink_frame_clock.pdf}{[pdf]}
+  \item \bibentry{morgan2025mockplans} \href{https://radionavlab.ae.utexas.edu/wp-content/uploads/morgan_MockStarlink_plans.pdf}{[pdf]}
+  \item \bibentry{komodromos2025networkplans} \href{https://radionavlab.ae.utexas.edu/wp-content/uploads/komodromos2025_network_aided_plans.pdf}{[pdf]}
+  \item \bibentry{qin2025toadopplerplans} \href{https://radionavlab.ae.utexas.edu/wp-content/uploads/komodromos_starlink_simulator.pdf}{[pdf]}
 \end{list}
 
 % {\bf Other Major Publications}
